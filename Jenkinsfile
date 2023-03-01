@@ -4,24 +4,23 @@ pipeline{
   stages{
   
     stage('build'){
-      step{
-        sh mvn validate
-        echo Validated
+      steps{
+        sh 'mvn validate'
+        echo 'Validated'
         }
       }
       stage('test'){
-      step{
-        sh mvn test
-        echo Tested
+      steps{
+        sh 'mvn test'
+        echo 'Tested'
         }
       }
       stage('package'){
-      step{
-        sh mvn package
-        echo Tested
+      steps{
+        sh 'mvn package'
+        echo 'Tested'
         }
       }
       
     }
-
 }
