@@ -21,6 +21,13 @@ pipeline{
         echo 'Tested'
         }
       }
+    
+    stage('Deploy to Nexus'){
+      steps{
+        sh 'mvn deploye'
+        echo 'Deployed Sucessfully...'
+        }
+      }
       
     }
 }
