@@ -24,7 +24,7 @@ pipeline{
     
     stage('Deploy to Nexus'){
       steps{
-        sh 'mvn clean deploy -Dmaven.test.skip=true'
+        sh 'mvn deploy -Dmaven.test.skip=true'
         echo 'Deployed Sucessfully...'
         }
       }
